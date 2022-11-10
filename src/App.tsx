@@ -1,16 +1,12 @@
-import {createElement as e, useState} from 'react';
+import React from 'react';
+import {Product} from "./components/Product";
 
 function App() {
-    const [count, setCount] = useState(0)
-
-    return e('div', {className: 'container', key: 1}, [
-        e('h1', {className: 'font-bold', key: 2}, `TEST JSX ${count}`),
-        e('button', {
-            className: 'py-2 px-4 border',
-            key: 3,
-            onClick: () => setCount(count + 1)
-        }, 'Click me!'),
-    ])
+    return(
+        <div className={'container mx-auto max-w-2xl pt-5'}>
+            <Product></Product>
+        </div>
+    )
 }
 
 export default App;
